@@ -1,0 +1,32 @@
+curl -X POST http://localhost:5000/api/v1/policy/purchase \
+  -H "Content-Type: application/json" \
+  -d '{
+    "quote_id": "QT20240114153022",
+    "customer_details": {
+      "name": "Saniya Banerjee",
+      "email": "saniya@example.com",
+      "phone": "9341460053"
+    },
+    "payment_method": "upi"
+  }'
+
+curl -X POST http://localhost:5000/api/v1/policy/purchase \
+  -H "Content-Type: application/json" \
+  -d '{
+    "quote_id": "QT20240114153022",
+    "customer_details": {
+      "name": "Saniya Banerjee",
+      "email": "saniya@example.com",
+      "phone": "9341460053"
+    },
+    "payment_method": "upi"
+  }'
+
+curl -X POST http://localhost:5000/api/v1/claim \
+  -H "Content-Type: application/json" \
+  -d '{
+    "policy_number": "POL20240114153100",
+    "claim_amount": 25000,
+    "incident_date": "2024-01-10",
+    "description": "Accidental damage"
+  }'
